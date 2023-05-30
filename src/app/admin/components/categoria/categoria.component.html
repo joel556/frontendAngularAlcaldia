@@ -1,0 +1,65 @@
+<div class="card">
+    <h1>Puesto de Trabajo</h1>
+
+    <p-button (click)="showModalDialogCategoria()" icon="pi pi-external-link" label="Nuevo"></p-button>
+    <p-dialog header="Personal" [(visible)]="displayModalCategoria" [modal]="true" [style]="{width: '50vw'}"
+        styleClass="p-fluid" [draggable]="false" [resizable]="false" [formGroup]="categoriaForm">
+
+        <div class="field">
+            <label for="description">Nombre de Cargo </label>
+            <input type="text" pInputText  formControlName="nombre"/>
+        </div>
+
+        <div class="field">
+            <label for="description">Cargo</label>
+            <textarea id="description" pInputTextarea required rows="3"
+                cols="20" formControlName="detalle"></textarea>
+        </div>
+
+
+        <ng-template pTemplate="footer">
+            <p-button icon="pi pi-check" (click)="enviarCategoria()"
+            [disabled]="!categoriaForm.valid" label="{{(categoria_id==-1)?'Guardar':'Actualizar'}}" styleClass="p-button-text">
+            
+            </p-button>
+        </ng-template>
+        
+    </p-dialog>
+
+
+    <!-- <form [formGroup]="categoriaForm">
+        <input type="text" formControlName="nombre">
+        <input type="text" formControlName="detalle">
+
+        <button type="button" (click)="enviarCategoria()"
+            [disabled]="!categoriaForm.valid">{{(categoria_id==-1)?'Guardar':'Actualizar'}}</button>
+    </form> -->
+
+    <p-table [value]="categorias" [tableStyle]="{'min-width': '50rem'}">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>CARGO</th>
+                <th>DETALLE</th>
+                <th>OPCIONES</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-categoria>
+            <tr>
+                <td>{{categoria.id}}</td>
+                <td>{{categoria.categoria}}</td>
+                <td>{{categoria.detalle}}</td>
+                <td>
+                    <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"
+                        (click)="editarCategoria(categoria)"></button>
+                    <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning"
+                        (click)="eliminarCategoria(categoria)"></button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+
+    
+</div>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+<p-toast></p-toast>

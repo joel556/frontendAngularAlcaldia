@@ -1,0 +1,30 @@
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start; /* Cambio de "center" a "flex-start" para alinear a la izquierda */
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: #6366F1;
+  color: #fff;
+}

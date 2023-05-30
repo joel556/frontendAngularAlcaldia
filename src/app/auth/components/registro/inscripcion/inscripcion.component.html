@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <link href="http://atencionciudadana.elalto.gob.bo/css/main.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
+    <title>Atención Ciudadana</title>
+</head>
+<body>
+
+<!-- =============================================== -->
+<!-- MENU -->
+<!-- =============================================== -->
+
+
+
+<!-- =============================================== -->
+<!--CONTENIDO -->
+<!-- =============================================== -->
+<div id="contidoPrincipal" >
+
+        <!--========================================================== -->
+    <!-- ICONOS -->
+    <!--========================================================== -->
+
+
+    <section class="mt-5 d-flex flex-column justify-content-center align-items-center pt-5  text-center w-50 m-auto" id="intro">
+        <h1 data-aos="fade-down" class="p-3 fs-2 fw-bold"><span class="text-danger fw-bold">Inscripción importación directa</span></h1>
+
+        <div>
+            <a data-aos="fade-up" routerLink="/registro" type="button" class="btn btn-outline-danger  mx-2 fs-6 m-1  fw-bold">Volver</a>
+
+            <a data-aos="fade-up" id="btnCrearPdf" type="button" class="btn btn-outline-primary mx-2 fs-6 m-1 fw-bold" (click)="generatePDF()">Descargar</a>
+        </div>
+
+    </section>
+
+
+
+    <!--========================================================== -->
+    <!-- REQUISITOS -->
+    <!--========================================================== -->
+
+    <section>
+        <div class="w-100 pb-5" id="requisito">
+
+            <div class="container">
+
+                <div data-aos="flip-up" data-aos-delay="350" class="row pt-3 pb-3">
+                    <div class="col-2 text-end ">
+                        <img src="/imagenes/tramites/Recursos 2.png" class="card-img-top w-25 mx-auto pt-3 " alt="...">
+                    </div>
+
+                    <div class="col-10 pt-4 border-start border-danger  border-5 wrapper-tramite">
+                        <h3 class="fw-bold redText">Nombre del trámite:</h3>
+                        <p class="">Inscripción importación directa</p>
+                    </div>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="350" class="row pt-3 pb-3">
+                    <div class="col-2 text-end">
+                        <img src="/imagenes/tramites/Recursos 3.png" class="card-img-top w-25 mx-auto pt-3 " alt="...">
+                    </div>
+
+                    <div class="col-10 pt-4 border-start border-danger  border-5 wrapper-tramite">
+                        <h3 class="fw-bold redText">¿De qué se trata el trámite?</h3>
+                        <p class="">Es el registro de vehículos importados por la Aduana Nacional</p>
+                    </div>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="350" class="row pt-3 pb-3">
+                    <div class="col-2 text-end">
+                        <img src="/imagenes/tramites/Recursos 4.png" class="card-img-top w-25 mx-auto pt-3 " alt="...">
+                    </div>
+
+                    <div data-aos="flip-up" data-aos-delay="350" class="col-10 pt-4 border-start border-danger  border-5 wrapper-tramite">
+                        <h3 class="fw-bold redText">¿Cuál es el área responsable?</h3>
+                        <p class="">Unidad de Ingresos y Control Tributario - Área Vehículos</p>
+                    </div>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="350" class="row pt-3 pb-3">
+                    <div class="col-2 text-end">
+                        <img src="/imagenes/tramites/Recursos 5.png" class="card-img-top w-25 mx-auto pt-3 " alt="...">
+                    </div>
+
+                    <div class="col-10 pt-4 border-start border-danger  border-5 wrapper-tramite">
+                        <h3 class="fw-bold redText">¿Dónde debo iniciar el trámite?</h3>
+                        <p class="">Urb. Villa Bolívar “D”, Av. Ladislao Cabrera, Terminal Metropolitana El Alto, 1er piso</p>
+                    </div>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="350" class="row pt-3 pb-3">
+                    <div class="col-2 text-end">
+                        <img src="/imagenes/tramites/Recursos 6.png" class="card-img-top w-25 mx-auto pt-3 " alt="...">
+                    </div>
+
+                    <div class="col-10 pt-4 border-start border-danger  border-5 wrapper-tramite">
+                        <h3 class="fw-bold redText">¿Cuáles son los días y horarios de atención?</h3>
+                        <p class="">Horas 08:00 A 12:00 y 14:00 A 18:00 de lunes a viernes</p>
+                    </div>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="350" class="row pt-3 pb-3">
+                    <div class="col-2 text-end">
+                        <img src="/imagenes/tramites/Recursos 7.png" class="card-img-top w-25 mx-auto pt-3 " alt="...">
+                    </div>
+
+                    <div class="col-10 pt-4 border-start border-danger  border-5 wrapper-tramite">
+                        <h3 class="fw-bold redText">¿Cuáles son los requisitos?</h3>
+
+                        
+                                <p id="PERSONA NATURAL" class="fw-bold redText">PERSONA NATURAL</p>
+
+
+                                                                                                <p class="">Original Póliza y FRV y/o DIM (Declaración de Importación de Mercancías)</p>
+                                                                                                                                <p class="">Fotocopia de CI (PROPIETARIO y/o APODERADO)</p>
+                                                                                                                                <p class="">Fotocopia de Poder (APODERADO)</p>
+                                                            
+                        
+
+
+                      
+
+
+                    </div>
+    
+                </div>
+
+
+                <div data-aos="flip-up" data-aos-delay="350" class="row pt-3 pb-3">
+                    <div class="col-2 text-end">
+                        <img src="/imagenes/tramites/Recursos 8.png" class="card-img-top w-25 mx-auto pt-3 " alt="...">
+                    </div>
+
+                    <div class="col-10 pt-4 border-start border-danger  border-5 wrapper-tramite">
+                        <h3 class="fw-bold redText">Descargables</h3>
+
+                        
+
+                    </div>
+                </div>
+
+
+
+                <div data-aos="flip-up" data-aos-delay="350" class="row pt-3 pb-3">
+                    <div class="col-2 text-end">
+                        <img src="/imagenes/tramites/Recursos 9.png" class="card-img-top w-25 mx-auto pt-3 " alt="...">
+                    </div>
+
+                    <div class="col-10 pt-4 border-start border-danger  border-5 wrapper-tramite">
+                        <h3 class="fw-bold redText">¿Debo realizar algún pago? ¿Cuánto?</h3>
+                        <p class="">El costo es 754 Bs. en vehículos y 450 Bs. en motos y se actualiza cada gestión</p>
+                    </div>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="350" class="row pt-3 pb-3">
+                    <div class="col-2 text-end">
+                        <img src="/imagenes/tramites/Recursos 10.png" class="card-img-top w-25 mx-auto pt-3 " alt="...">
+                    </div>
+
+                    <div class="col-10 pt-4 border-start border-danger  border-5 wrapper-tramite">
+                        <h3 class="fw-bold redText">¿Cuánto tiempo dura el trámite?</h3>
+                        <p class="">Al momento, si cumple con todos los requisitos.</p>
+                    </div>
+                </div>
+
+                <div data-aos="flip-up" data-aos-delay="350" class="row pt-3 pb-3">
+                    <div class="col-2 text-end">
+                        <img src="/imagenes/tramites/Recursos 11.png" class="card-img-top w-25 mx-auto pt-3 " alt="...">
+                    </div>
+
+                    <div class="col-10 pt-4 border-start border-danger  border-5 wrapper-tramite">
+                        <h3 class="fw-bold redText">¿Qué debo recibir al finalizar el trámite?</h3>
+                        <p class="">Las placas, el certificado CRPVA y Plaqueta</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    <!--========================================================== -->
+    <!--FOOTER-->
+    <!--========================================================== -->
+    <footer class="w-100  d-flex  align-items-center justify-content-center flex-wrap mt-1">
+        <p class="fs-5 pt-3 fw-bold">&copy; GAM-Patacamaya Todos Los Derechos Reservados 2023</p>
+        <div id="iconos" >
+            <a href="https://www.facebook.com/ElAltoAlcaldia"><i class="bi bi-facebook"></i></a>
+            <a href="https://twitter.com/renuevaelalto?t=9W6ixRI4MKKTbYUqmJxf6Q&s=09"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.instagram.com/alcaldiaelalto/?utm_medium=copy_link"><i class="bi bi-instagram"></i></a>
+        </div>
+      </footer>
+      
+
+
+
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="http://atencionciudadana.elalto.gob.bo/js/main2.js" defer></script>
+<script>
+    AOS.init({
+        easing: 'ease-out-back',
+        duration: 1000
+    });
+</script>
+
+

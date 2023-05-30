@@ -1,0 +1,127 @@
+<div class="grid">
+    <div class="col-8">
+        <div class="card">
+            <h5>Lista productos</h5>
+            <p-table #dt [value]="products" [lazy]="true" (onLazyLoad)="loadProductos($event)" [rows]="15"
+                [totalRecords]="totalRecords" [loading]="loading" [paginator]="true"
+                [globalFilterFields]="['name','country.name','representative.name','status']"
+                [tableStyle]="{'min-width': '35rem'}" [rowHover]="true" dataKey="id"
+                currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} entries"
+                [showCurrentPageReport]="true">
+                <ng-template pTemplate="caption">
+                    <div class="flex align-items-center justify-content-between">
+                        <h5 class="m-0">Gestión Productos</h5>
+                        <span class="p-input-icon-left">
+                            <i class="pi pi-search"></i>
+                            <!--<input pInputText type="text" (input)="dt.filterGlobal($event.target.value, 'contains')" placeholder="Search..." />-->
+                        </span>
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th pSortableColumn="nombre" style="min-width:5rem">Nombre <p-sortIcon field="nombre">
+                            </p-sortIcon>
+                        </th>
+                        <th>Image</th>
+                        <th pSortableColumn="precio">Precio <p-sortIcon field="precio"></p-sortIcon>
+                        </th>
+                        <th pSortableColumn="categoria_id" style="min-width:3rem">Categoria <p-sortIcon
+                                field="categoria"></p-sortIcon>
+                        </th>
+                        <th>Acciones</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-product>
+                    <tr>
+                        <td>{{product.nombre}}</td>
+                        <td><img [src]="'http://127.0.0.1:8000/' + product.imagen" [alt]="product.name" width="100"
+                                class="shadow-4" /></td>
+                        <td>{{product.precio | currency:'USD'}}</td>
+                        <td>{{product.categoria.categoria}}</td>
+                        <td>
+
+                            <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"
+                                (click)="seleccionarProduct(product)"></button>
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="summary">
+                    <div class="flex align-items-center justify-content-between">
+                        In total there are {{products ? products.length : 0 }} products.
+                    </div>
+                </ng-template>
+            </p-table>
+
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="grid">
+            <div class="col-12">
+                <div class="card">
+                    <h5>Carrito</h5>
+                    <p-table [value]="carrito">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>NOM</th>
+                                <th>PRE</th>
+                                <th>CANT</th>
+                                <th>ACCION</th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-prod>
+                            <tr>
+                                <td>{{prod.nombre}}</td>
+                                <td>{{prod.precio}}</td>
+                                <td>{{prod.cantidad}}</td>
+                                <td>
+                                    <button pButton pRipple icon="pi pi-trashed" class="p-button-rounded p-button-success mr-2"
+                                (click)="quitarCarrito(prod)"></button>
+                                </td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="card">
+                    <h5>Cliente</h5>
+                    <div *ngIf="cliente.id">
+                        <h4>CLIENTE: {{cliente.nombre_completo}}</h4>
+                        <h4>CI/NIT: {{cliente.ci_nit}}</h4>
+                        <h4>TEELFONO: {{cliente.telefono}}</h4>
+
+                    </div>
+                    <div>
+                        <input type="text" pInputText [(ngModel)]="buscar">
+                         
+                        <p-button (click)="buscarCliente()" icon="pi pi-external-link" label="Buscar"></p-button>
+ 
+                        <p-button (click)="showModalDialogCliente()" icon="pi pi-external-link" label="Nuevo Cliente"></p-button>
+<p-dialog header="Nuevo Cliente" [(visible)]="displayModalCliente" [modal]="true" [style]="{width: '50vw'}"
+    [draggable]="false" [resizable]="false">
+
+    <input type="text" pInputText [(ngModel)]="cliente.nombre_completo"> 
+
+    <input type="text" pInputText [(ngModel)]="cliente.ci_nit"> 
+    <input type="text" pInputText [(ngModel)]="cliente.telefono"> 
+
+
+       
+        <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="guardarCliente()" label="Guardar Cliente" styleClass="p-button-text"></p-button>
+        </ng-template>
+</p-dialog>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card">
+
+                    <p-button (click)="guardarPedido()" icon="pi pi-external-link" label="Guardar Pedido"></p-button>
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
