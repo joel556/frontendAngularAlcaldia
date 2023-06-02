@@ -35,20 +35,20 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
-                label: 'Pedido',
+                label: 'Tramites',
                 items: [
-                    { label: 'Lista Pedidos', icon: 'pi pi-fw pi-prime', routerLink: ['/admin/pedido'] },
-                    { label: 'Nuevo pedido', icon: 'pi pi-fw pi-desktop', routerLink: ['/admin/pedido/nuevo'] },
+                    { label: 'Tramites', icon: 'pi pi-fw pi-prime', routerLink: ['/admin/pedido'] },
+                    { label: 'Nuevo Tramite', icon: 'pi pi-fw pi-desktop', routerLink: ['/admin/pedido/nuevo'] },
                 ]
             },
             {
-                label: 'Pages',
+                label: 'Paginas GAMP',
                 icon: 'pi pi-fw pi-briefcase',
                 items: [
                     {
-                        label: 'Landing',
+                        label: 'Facebook',
                         icon: 'pi pi-fw pi-globe',
-                        routerLink: ['/landing']
+                        routerLink: ['https://www.facebook.com/CiudadIntermedia/']
                     },
                     {
                         label: 'Auth',
@@ -71,26 +71,26 @@ export class AppMenuComponent implements OnInit {
                             }
                         ]
                     },
-                    {
-                        label: 'Crud',
-                        icon: 'pi pi-fw pi-pencil',
-                        routerLink: ['/pages/crud']
-                    },
-                    {
-                        label: 'Timeline',
-                        icon: 'pi pi-fw pi-calendar',
-                        routerLink: ['/pages/timeline']
-                    },
-                    {
-                        label: 'Not Found',
-                        icon: 'pi pi-fw pi-exclamation-circle',
-                        routerLink: ['/notfound']
-                    },
-                    {
-                        label: 'Empty',
-                        icon: 'pi pi-fw pi-circle-off',
-                        routerLink: ['/pages/empty']
-                    },
+                    // {
+                    //     label: 'Crud',
+                    //     icon: 'pi pi-fw pi-pencil',
+                    //     routerLink: ['/pages/crud']
+                    // },
+                    // {
+                    //     label: 'Timeline',
+                    //     icon: 'pi pi-fw pi-calendar',
+                    //     routerLink: ['/pages/timeline']
+                    // },
+                    // {
+                    //     label: 'Not Found',
+                    //     icon: 'pi pi-fw pi-exclamation-circle',
+                    //     routerLink: ['/notfound']
+                    // },
+                    // {
+                    //     label: 'Empty',
+                    //     icon: 'pi pi-fw pi-circle-off',
+                    //     routerLink: ['/pages/empty']
+                    // },
                 ]
             },
             {
@@ -102,17 +102,8 @@ export class AppMenuComponent implements OnInit {
                             {
                                 label: 'Tramites Vehiculares', icon: 'pi pi-fw pi-bookmark', 
                                 items: [
-                                    { label: 'Vehiculos', icon: 'pi pi-fw pi-bookmark', routerLink: ['/admin/tramites'], },
-                                    { label: 'Rebaja Tributaria', icon: 'pi pi-fw pi-bookmark' , routerLink: ['/admin/tramites/rebajatribu'],},
-                                    { label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark' },
-                                    { label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark' },
-                                    { label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark' },
-                                    { label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark' },
-                                    { label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark' },
-                                    { label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark' },
-                                    { label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark' },
-                                    { label: 'Submenu 1.1.2', icon: 'pi pi-fw pi-bookmark' },
-                                    { label: 'Submenu 1.1.3', icon: 'pi pi-fw pi-bookmark' },
+                                    { label: 'Vehiculos', icon: 'pi pi-fw pi-bookmark',  },
+                                 
                                 ]
                             },
                             {
@@ -127,10 +118,10 @@ export class AppMenuComponent implements OnInit {
                         label: 'Tramites de Inmuehebles', icon: 'pi pi-fw pi-bookmark',
                         items: [
                             {
-                                label: 'Submenu 2.1', icon: 'pi pi-fw pi-bookmark',
+                                label: 'impuestos Vehiculares', icon: 'pi pi-fw pi-bookmark',
                                 items: [
-                                    { label: 'Submenu 2.1.1', icon: 'pi pi-fw pi-bookmark' },
-                                    { label: 'Submenu 2.1.2', icon: 'pi pi-fw pi-bookmark' },
+                                    { label: 'Impuestos', icon: 'pi pi-fw pi-bookmark' },
+                                    { label: 'Mediciones', icon: 'pi pi-fw pi-bookmark' },
                                 ]
                             },
                             {
@@ -147,10 +138,10 @@ export class AppMenuComponent implements OnInit {
                 label: 'Get Started',
                 items: [
                     {
-                        label: 'Documentation', icon: 'pi pi-fw pi-question', routerLink: ['/documentation']
+                        label: 'Documentation', icon: 'pi pi-fw pi-question', URL: ['https://www.facebook.com/CiudadIntermedia/']
                     },
                     {
-                        label: 'View Source', icon: 'pi pi-fw pi-search', url: ['https://github.com/primefaces/sakai-ng'], target: '_blank'
+                        label: 'View Source', icon: 'pi pi-fw pi-search', url: ['https://www.facebook.com/CiudadIntermedia/'], target: '_blank'
                     }
                 ]
             }

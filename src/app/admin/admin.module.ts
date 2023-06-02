@@ -41,7 +41,7 @@ import { PdfComponent } from './components/pdf/pdf.component';
     TramitesComponent,
     TramitesVehiculoComponent,
     RebajatribuComponent,
-    PdfComponent
+    PdfComponent,
   ],
   imports: [
     CommonModule,

@@ -87,7 +87,10 @@ const routes: Routes = [
         path: 'registro/tablas',
         component: TablasComponent,
       },
-      
+      // {
+      //   path: 'admin/document-upload-form',
+      //   component: DocumentUploadFormComponent,
+      // },
       
       
       {

@@ -3,7 +3,7 @@
 </button>
 
 <p-sidebar [(visible)]="visible" position="right" [transitionOptions]="'.3s cubic-bezier(0, 0, 0.2, 1)'" styleClass="layout-config-sidebar w-20rem">
-    <h5>Scale</h5>
+    <h5>Escala del Zoom</h5>
     <div class="flex align-items-center">
         <button icon="pi pi-minus" type="button" pButton (click)="decrementScale()" class="p-button-text p-button-rounded w-2rem h-2rem mr-2" [disabled]="scale === scales[0]"></button>
         <div class="flex gap-2 align-items-center">
@@ -13,18 +13,18 @@
     </div>
 
     <ng-container *ngIf="!minimal">
-        <h5>Menu Type</h5>
+        <h5>Menu Izquierdo</h5>
         <div class="field-radiobutton">
             <p-radioButton name="menuMode" value="static" [(ngModel)]="menuMode" inputId="mode1"></p-radioButton>
-            <label for="mode1">Static</label>
+            <label for="mode1">Estatico</label>
         </div>
         <div class="field-radiobutton">
             <p-radioButton name="menuMode" value="overlay" [(ngModel)]="menuMode" inputId="mode2"></p-radioButton>
-            <label for="mode2">Overlay</label>
+            <label for="mode2">Despleglable</label>
         </div>
     </ng-container>
 
-    <ng-container *ngIf="!minimal">
+    <!-- <ng-container *ngIf="!minimal">
         <h5>Input Style</h5>
         <div class="flex">
             <div class="field-radiobutton flex-1">
@@ -39,10 +39,10 @@
 
         <h5>Ripple Effect</h5>
         <p-inputSwitch [(ngModel)]="ripple"></p-inputSwitch>
-    </ng-container>
+    </ng-container> -->
 
 
-    <h5>Bootstrap</h5>
+    <!-- <h5>Bootstrap</h5>
     <div class="grid">
         <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('bootstrap4-light-blue', 'light')">
@@ -112,9 +112,9 @@
                 <img src="assets/layout/images/themes/md-dark-deeppurple.svg" class="w-2rem h-2rem" alt="Material Dark Deep Purple">
             </button>
         </div>
-    </div>
+    </div> -->
 
-    <h5>Tailwind</h5>
+    <!-- <h5>Tailwind</h5>
     <div class="grid">
         <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('tailwind-light', 'light')">
@@ -174,36 +174,36 @@
                 <img src="assets/layout/images/themes/lara-dark-teal.png" class="w-2rem h-2rem" alt="Lara Dark Teal">
             </button>
         </div>
-    </div>
+    </div> -->
 
-    <h5>PrimeOne Design - 2021</h5>
+    <h5>Modo Oscuro</h5>
     <div class="grid">
-        <div class="col-3">
+        <!-- <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('saga-blue', 'light')">
                 <img src="assets/layout/images/themes/saga-blue.png" class="w-2rem h-2rem" alt="Saga Blue">
             </button>
-        </div>
-        <div class="col-3">
+        </div> -->
+        <!-- <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('saga-green', 'light')">
                 <img src="assets/layout/images/themes/saga-green.png" class="w-2rem h-2rem" alt="Saga Green">
             </button>
-        </div>
+        </div>-->
         <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('saga-orange', 'light')">
                 <img src="assets/layout/images/themes/saga-orange.png" class="w-2rem h-2rem" alt="Saga Orange">
             </button>
         </div>
-        <div class="col-3">
+        <!-- <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('saga-purple', 'light')">
                 <img src="assets/layout/images/themes/saga-purple.png" class="w-2rem h-2rem" alt="Saga Purple">
             </button>
-        </div>
+        </div> 
         <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('vela-blue', 'dark')">
                 <img src="assets/layout/images/themes/vela-blue.png" class="w-2rem h-2rem" alt="Vela Blue">
             </button>
-        </div>
-        <div class="col-3">
+        </div> -->
+        <!-- <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('vela-green', 'dark')">
                 <img src="assets/layout/images/themes/vela-green.png" class="w-2rem h-2rem" alt="Vela Green">
             </button>
@@ -227,16 +227,16 @@
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('arya-green', 'dark')">
                 <img src="assets/layout/images/themes/arya-green.png" class="w-2rem h-2rem" alt="Arya Green">
             </button>
-        </div>
+        </div> -->
         <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('arya-orange', 'dark')">
                 <img src="assets/layout/images/themes/arya-orange.png" class="w-2rem h-2rem" alt="Arya Orange">
             </button>
-        </div>
-        <div class="col-3">
+         </div>
+       <!-- <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('arya-purple', 'dark')">
                 <img src="assets/layout/images/themes/arya-purple.png" class="w-2rem h-2rem" alt="Arya Purple">
             </button>
-        </div>
+        </div> -->
     </div>
 </p-sidebar>
