@@ -4,10 +4,10 @@
         <ng-template pTemplate="header">
             <tr>
                 <th>ID</th>
-                <th>FECHA PEDIDO</th>
-                <th>CLIENTE</th>
+                <th>FECHA TRAMITE</th>
+                <th>USUARIO</th>
                 <th>ESTADO</th>
-                <th>PRODUCTOS</th>
+                <th>TIPO DE TRAMITE</th>
             </tr>
         </ng-template>
         <ng-template pTemplate="body" let-pedido>
@@ -17,7 +17,7 @@
                 <td>{{pedido.cliente.nombre_completo}}</td>
                 <td>{{(pedido.estado==2)?'COMPLETADO':'CANCELADO'}}</td>
                 <td>
-<p-button (click)="showModalDialog(pedido)" icon="pi pi-external-link" label="Mostrar Productos"></p-button>
+<p-button (click)="showModalDialog(pedido)" icon="pi pi-external-link" label="MOSTRAR TRAMITE"></p-button>
 
 
                 </td>
@@ -27,7 +27,7 @@
 </div>
 
 
-<p-dialog header="Productos" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}"
+<p-dialog header="TRAMITE" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}"
     [draggable]="false" [resizable]="false">
     
     

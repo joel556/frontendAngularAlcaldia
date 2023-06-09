@@ -1,7 +1,7 @@
 <div class="grid">
     <div class="col-8">
         <div class="card">
-            <h5>Lista productos</h5>
+            <h5>TRAMITES</h5>
             <p-table #dt [value]="products" [lazy]="true" (onLazyLoad)="loadProductos($event)" [rows]="15"
                 [totalRecords]="totalRecords" [loading]="loading" [paginator]="true"
                 [globalFilterFields]="['name','country.name','representative.name','status']"
@@ -10,7 +10,7 @@
                 [showCurrentPageReport]="true">
                 <ng-template pTemplate="caption">
                     <div class="flex align-items-center justify-content-between">
-                        <h5 class="m-0">Gestión Productos</h5>
+                        <h5 class="m-0">Gestión Trámites </h5>
                         <span class="p-input-icon-left">
                             <i class="pi pi-search"></i>
                             <!--<input pInputText type="text" (input)="dt.filterGlobal($event.target.value, 'contains')" placeholder="Search..." />-->
@@ -23,9 +23,9 @@
                             </p-sortIcon>
                         </th>
                         <th>Image</th>
-                        <th pSortableColumn="precio">Precio <p-sortIcon field="precio"></p-sortIcon>
+                        <th pSortableColumn="precio">Precio del Trámite <p-sortIcon field="precio"></p-sortIcon>
                         </th>
-                        <th pSortableColumn="categoria_id" style="min-width:3rem">Categoria <p-sortIcon
+                        <th pSortableColumn="categoria_id" style="min-width:3rem">Personal <p-sortIcon
                                 field="categoria"></p-sortIcon>
                         </th>
                         <th>Acciones</th>
@@ -58,14 +58,14 @@
         <div class="grid">
             <div class="col-12">
                 <div class="card">
-                    <h5>Carrito</h5>
+                    <h5>Listado de Trámites</h5>
                     <p-table [value]="carrito">
                         <ng-template pTemplate="header">
                             <tr>
-                                <th>NOM</th>
-                                <th>PRE</th>
-                                <th>CANT</th>
-                                <th>ACCION</th>
+                                <th>Nombreth>
+                                <th>Precio</th>
+                                <th>Total</th>
+                                <th>Acciones</th>
                             </tr>
                         </ng-template>
                         <ng-template pTemplate="body" let-prod>
@@ -84,7 +84,7 @@
             </div>
             <div class="col-12">
                 <div class="card">
-                    <h5>Cliente</h5>
+                    <h5>Usuario</h5>
                     <div *ngIf="cliente.id">
                         <h4>CLIENTE: {{cliente.nombre_completo}}</h4>
                         <h4>CI/NIT: {{cliente.ci_nit}}</h4>
@@ -96,7 +96,7 @@
                          
                         <p-button (click)="buscarCliente()" icon="pi pi-external-link" label="Buscar"></p-button>
  
-                        <p-button (click)="showModalDialogCliente()" icon="pi pi-external-link" label="Nuevo Cliente"></p-button>
+                        <p-button (click)="showModalDialogCliente()" icon="pi pi-external-link" label="Nuevo Trámite"></p-button>
 <p-dialog header="Nuevo Cliente" [(visible)]="displayModalCliente" [modal]="true" [style]="{width: '50vw'}"
     [draggable]="false" [resizable]="false">
 
@@ -108,7 +108,7 @@
 
        
         <ng-template pTemplate="footer">
-        <p-button icon="pi pi-check" (click)="guardarCliente()" label="Guardar Cliente" styleClass="p-button-text"></p-button>
+        <p-button icon="pi pi-check" (click)="guardarCliente()" label="Guardar Trámite" styleClass="p-button-text"></p-button>
         </ng-template>
 </p-dialog>
                     </div>
@@ -118,7 +118,7 @@
             <div class="col-12">
                 <div class="card">
 
-                    <p-button (click)="guardarPedido()" icon="pi pi-external-link" label="Guardar Pedido"></p-button>
+                    <p-button (click)="guardarPedido()" icon="pi pi-external-link" label="Guardar Trámite"></p-button>
  
                 </div>
             </div>

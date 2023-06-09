@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - Provincia Patacamaya</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <header class="header">
+        <div class="header__background"></div>
+        <h1 class="header__title">Historia sobre PATACAMAYA</h1>
+      </header>
+      
+    <section class="content-section">
+        <div class="content-section__image">
+          <img src="assets/demo/images/patacamaya/pataAntiguo.jpg" alt="Imagen">
+        </div>
+        <div class="content-section__text">
+          <h2>¿Cómo es el municipio de Patacamaya?</h2>
+          <p>Patacamaya es la quinta sección municipal de la provincia Aroma, ubicada sobre la red troncal del camino La Paz - Oruro, a 109 kms. de la capital del departamento. De Patacamaya parte la conexión caminera hacia Tambo Quemado, en la frontera con Chile, principal vía de acceso de Bolivia hacia el océano Pacífico.</p>
+        </div>
+    </section>
+
+
+    <section class="content-section">
+        <div class="content-section__image">
+          <img src="assets/demo/images/patacamaya/agri.jpg" alt="Imagen">
+        </div>
+        <div class="content-section__text">
+          <h2>Actividades económicas de Patacamaya</h2>
+          <p>La actividad económica principal que se desarrolla en el municipio Patacamaya es la agricultura con cultivos de papa, cebada y quinua, destinados a su comercialización en las ferias locales, mientras que los cultivos de trigo, cañahua, haba, arveja, cebada y grano son para el consumo familiar.</p>
+        </div>
+    </section>
+
+
+
+    <section class="content-section">
+        <div class="content-section__image">
+          <img src="assets/demo/images/patacamaya/visca.jpg" alt="Imagen">
+        </div>
+        <div class="content-section__text">
+          <h2>¿Cuáles son las ventajas y potencialidades del municipio de Patacamaya?</h2>
+          <p>La ventaja comparativa que posee el Municipio es la ganadería de vacunos, para lo cual cuenta con vastas regiones potencialmente aptas para el cultivo de forrajes. El hecho de que por el Municipio atraviese la carretera asfaltada La Paz - Oruro, constituye una ventaja, ya que posibilita el crecimiento socioeconómico de la población. El balneario de Vizcachani es otra de las fortalezas de la región, en tanto las aguas termales con las que cuenta, consideradas medicinales, atraen la visita de gran cantidad de gente que se traslada hacia el lugar todos los fines de semana.</p>
+        </div>
+    </section>
+
+
+
+    <section class="content-section">
+        <div class="content-section__image">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11906.717133060055!2d-67.9143705!3d-17.2402217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9158e8cec5115953%3A0x6e6cce7a61bbb7d1!2sPatacamaya!5e0!3m2!1sen!2sca!4v1597234990707!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="content-section__text">
+          <h2>Localización</h2>
+          <p>Localizado en el departamento de La Paz, Patacamaya es un municipio cuya superficie, población, altitud y otra información importante se proporciona a continuación.
+            Para todos sus procedimientos administrativos, puede dirigirse al Gobierno Autónomo Municipal de Patacamaya en la dirección y horarios indicados en esta página, o contactar al ayuntamiento por teléfono o por correo electrónico según su preferencia y datos disponibles.</p>
+        </div>
+    </section>
+
+
+
+    <section class="content-section">
+        <div class="content-section__image">
+          <img src="assets/demo/images/patacamaya/soldados.jpg" alt="Imagen">
+        </div>
+        <div class="content-section__text">
+          <h2>Regimiento de Caballería Blindada</h2>
+          <p>El Ejército de Bolivia ha sentado presencia en el municipio de Patacamaya al instalar una unidad militar dentro de su jurisdicción. El Regimiento de Caballería Blindada 1 "Calama" (RCB-1 "Calama") se encuentra asentado en este municipio.</p>
+        </div>
+    </section>
+
+
+    
+        
+
+    <div class="gallery-container">
+        <div class="gallery-title">
+            <h1 class="title">Galería de Imágenes de PATACAMAYA</h1>
+          </div>
+          
+        <section class="gallery">
+          <div class="gallery-item">
+            <img [src]="galleryItems[currentIndex]" [alt]="'Imagen ' + (currentIndex + 1)">
+          </div>
+        </section>
+      
+        <div class="button-container">
+          <p-button id="previousButton" class="gallery-button" label="Anterior" styleClass="p-button-raised p-button-secondary" (click)="showPreviousImage()"></p-button>
+      
+          <p-button id="nextButton" class="gallery-button" label="Siguiente" styleClass="p-button-raised p-button-secondary" (click)="showNextImage()"></p-button>
+        </div>
+      </div>
+      
+      
+      
+        
+
+      
+      
+
+
+  <section class="nosotros">
+    <div class="container">
+      <h2>¿Quiénes somos?</h2>
+      <p>Somos una comunidad comprometida con el desarrollo y la promoción de la provincia de Patacamaya.</p>
+
+      <h2>Nuestra misión</h2>
+      <p>Nuestra misión es trabajar en conjunto para mejorar la calidad de vida de los habitantes de Patacamaya y promover el desarrollo sostenible de la región.</p>
+
+      <h2>Nuestra visión</h2>
+      <p>Queremos convertir a Patacamaya en un referente nacional e internacional en términos de desarrollo socioeconómico y preservación de su patrimonio cultural y natural.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Provincia Patacamaya. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

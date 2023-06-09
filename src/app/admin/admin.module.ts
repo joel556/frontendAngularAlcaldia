@@ -28,7 +28,8 @@ import { TramitesComponent } from './components/tramites/tramites.component';
 import { TramitesVehiculoComponent } from './components/tramites-vehiculo/tramites-vehiculo.component';
 import { RebajatribuComponent } from './components/tramites/rebajatribu/rebajatribu.component';
 import { PdfComponent } from './components/pdf/pdf.component';
-
+import { CalendarioComponent } from './components/calendario/calendario.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
 @NgModule({
   declarations: [
     PerfilComponent,
@@ -42,6 +43,7 @@ import { PdfComponent } from './components/pdf/pdf.component';
     TramitesVehiculoComponent,
     RebajatribuComponent,
     PdfComponent,
+    CalendarioComponent,
   ],
   imports: [
     CommonModule,
@@ -61,7 +63,8 @@ import { PdfComponent } from './components/pdf/pdf.component';
     ToolbarModule,
     FileUploadModule,
     RadioButtonModule,
-    InputNumberModule
+    InputNumberModule,
+    FullCalendarModule 
     
   ]
 })

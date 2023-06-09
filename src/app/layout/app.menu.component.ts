@@ -31,7 +31,7 @@ export class AppMenuComponent implements OnInit {
                 label: 'Usuarios',
                 items: [
                     { label: 'Usuarios', icon: 'pi pi-fw pi-eye', routerLink: ['/admin/usuario'], badge: 'NEW' },
-                    { label: 'All Blocks', icon: 'pi pi-fw pi-globe', url: ['https://www.primefaces.org/primeblocks-ng'], target: '_blank' },
+                    { label: 'Agendar Cita ', icon: 'pi pi-fw pi-globe', routerLink: ['/admin/calendario'], target: '_blank' },
                 ]
             },
             {

@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { LayoutComponent } from './layout-pagina/layout.component';
 import { Error404Component } from './errors/error404/error404.component';
-
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppLayoutModule } from './layout/app.layout.module';
 import { NotfoundComponent } from './demo/components/notfound/notfound.component';
@@ -17,6 +15,9 @@ import { EventService } from './demo/service/event.service';
 import { IconService } from './demo/service/icon.service';
 import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
+import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
+
+
 
 
 @NgModule({
@@ -29,7 +30,9 @@ import { PhotoService } from './demo/service/photo.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AppLayoutModule
+    AppLayoutModule,
+    FullCalendarModule,
+   
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy },
     CountryService, CustomerService, EventService, IconService, NodeService,

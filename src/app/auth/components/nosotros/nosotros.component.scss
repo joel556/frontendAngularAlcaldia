@@ -1,0 +1,169 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Pacifico&family=Tangerine:wght@700&display=swap');
+
+
+.header {
+    position: relative;
+    height: 300px; /* ajusta la altura según tus necesidades */
+  }
+  
+  .header__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imagenes/fondo_pata.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Ajusta la opacidad según tus preferencias */
+  }
+  
+  .header__title {
+    position: absolute;
+    bottom: 20px; /* Ajusta la posición vertical según tus necesidades */
+    left: 20px; /* Ajusta la posición horizontal según tus necesidades */
+    color: rgb(0, 0, 0);
+    font-size: 70px; /* Ajusta el tamaño de fuente según tus necesidades */
+    margin: 0;
+    font-family: 'Gruppo', sans-serif;
+    font-family: 'Pacifico', cursive;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .header__title {
+      font-size: 40px; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
+      bottom: 10px; /* Ajusta la posición vertical para pantallas más pequeñas */
+      left: 10px; /* Ajusta la posición horizontal para pantallas más pequeñas */
+    }
+  }
+  .content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .content-section__image,
+  .content-section__text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .content-section__image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .content-section__text {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 34px;
+    font-family: 'Gruppo', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Tangerine', cursive;
+    
+  }
+  
+  .content-section__text h2 {
+    margin-bottom: 10px;
+    font-size: 34px;
+    font-weight: bold;
+    font-family: 'Gruppo', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Tangerine', cursive;
+
+  }
+  
+  @media (max-width: 768px) {
+    .content-section {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .content-section__text {
+      margin-top: 20px;
+      margin-left: 0;
+      
+    }
+  }
+  .content-section__image img {
+    max-width: 100%;
+    height: auto;
+    width: 600px; /* Establece el ancho deseado */
+    height: 400px; /* Establece la altura deseada */
+  }
+  .content-section__text {
+    background-color: #c9c9c9; /* Color de fondo gris claro */
+    padding: 20px; /* Ajusta el espacio interno según tus necesidades */
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .gallery-item {
+    width: 50%; /* Ajusta el ancho de cada imagen según tus necesidades */
+    margin: 10px; /* Ajusta el margen entre las imágenes según tus necesidades */
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 8px solid #000000; /* Ajusta el tamaño del borde según tus necesidades */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajusta la sombra según tus necesidades */
+    transition: transform 0.3s ease; /* Agrega una transición suave al hacer hover */
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.05); /* Hace zoom en la imagen al hacer hover */
+  }
+  
+  .gallery-item {
+    width: calc(100% - 50px); /* Ajusta el valor del margen según tus necesidades */
+    height: 1000px; /* Ajusta la altura deseada para cada imagen */
+    margin: 20px; /* Ajusta el margen entre las imágenes según tus necesidades */
+  }
+  
+  
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery-item.active {
+    border: 2px solid red; /* Ajusta el estilo de resaltado según tus necesidades */
+  }
+  
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* Ajusta el margen superior según tus necesidades */
+  }
+  
+  .gallery-button {
+    margin: 0 5px; /* Ajusta el margen horizontal según tus necesidades */
+  }
+  .gallery-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Ajusta la altura según tus necesidades */
+  }
+  
+  .title {
+    font-size: 66px; 
+    font-family: 'Gruppo', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Tangerine', cursive;/* Ajusta el tamaño de fuente según tus necesidades */
+  }
+  

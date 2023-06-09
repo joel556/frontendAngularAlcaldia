@@ -1,0 +1,161 @@
+ <!-- <h2>Registro de Usuario</h2> -->
+ <form (ngSubmit)="registrarUsuario()" #formulario="ngForm">
+  <!-- <div>
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="usuario.name" required>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="usuario.email" required>
+  </div>
+
+  <div>
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="usuario.password" required>
+  </div>
+
+  <div>
+    <label for="c_password">Confirmar Contraseña:</label>
+    <input type="password" id="c_password" name="c_password" [(ngModel)]="usuario.c_password" required>
+    <div *ngIf="formulario && formulario.controls['c_password'].errors && formulario.controls['c_password'].errors['mismatch']">
+      Las contraseñas no coinciden.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="formulario?.invalid || (formulario?.controls['c_password'].errors && formulario.controls['c_password'].errors['mismatch'])">Registrar</button>
+   -->
+
+
+   <div class="surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden" style="background-image: url('assets/demo/images/patacamaya/fondo_pata.jpg'); background-size: cover;">
+    <div class="flex flex-column align-items-center justify-content-center">
+        <div style="border-radius:56px; padding:0.3rem; background: linear-gradient(180deg, var(--primary-color) 10%, rgba(33, 150, 243, 0) 30%);">
+            <div class="w-full surface-card py-8 px-5 sm:px-8" style="border-radius:53px">
+                <div class="text-center mb-5">
+                    <img src="assets/demo/images/patacamaya/logo.jpg" alt="Image" height="300" class="mb-3">
+                    <div class="text-900 text-3xl font-medium mb-3">REGISTRARSE <br> GAM-PATACAMAYA</div>
+                    
+                </div>
+
+                <div (ngSubmit)="registrarUsuario()" >
+                    <label for="name" class="block text-900 text-xl font-medium mb-2">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem" [(ngModel)]="usuario.name" required>
+
+                    <label for="email" class="block text-900 text-xl font-medium mb-2">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Email " pInputText class="w-full md:w-30rem mb-5" style="padding:1rem" [(ngModel)]="usuario.email" required>
+                   
+                    <label for="password" class="block text-900 text-xl font-medium mb-2">Contraseña</label>
+                    <input id="password" type="password" name="password" placeholder="Contraseña" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem" [(ngModel)]="usuario.password" required>
+
+
+                    <!-- <label for="password" class="block text-900 text-xl font-medium mb-2">Contraseña</label>
+                    <p-password id="password" formControlName="password" placeholder="Password" [toggleMask]="true" styleClass="mb-5" inputStyleClass="w-full p-3 md:w-30rem" [(ngModel)]="usuario.password" required></p-password>
+                     -->
+                   <label for="c_password" class="block text-900 text-xl font-medium mb-2">Confirmar Contraseña</label>
+                   <input id="c_password" type="password" name="c_password" placeholder="Confirmar contraseña" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem" [(ngModel)]="usuario.c_password" required>
+                    
+                     
+                    <!-- <label for="c_password" class="block text-900 text-xl font-medium mb-2">Confirmar Contraseña</label>
+                    <p-password id="c_password" type="text" name="c_password" formControlName="c_password" placeholder="Password" [toggleMask]="true" styleClass="mb-5" inputStyleClass="w-full p-3 md:w-30rem" [(ngModel)]="usuario.c_password" required></p-password>
+                              -->
+                    <div *ngIf="formulario && formulario.controls['c_password'].errors && formulario.controls['c_password'].errors['mismatch']">
+                        Las contraseñas no coinciden.
+                      </div>
+                  
+                    <div class="flex align-items-center justify-content-between mb-5 gap-5">
+                    </div>
+                    <button pButton pRipple label="Registrarse" class="w-full p-3 text-xl" type="submit" [disabled]="formulario?.invalid || (formulario?.controls['c_password'].errors && formulario.controls['c_password'].errors['mismatch'])"></button>
+                    <br>
+                    <br>
+                    <span class="text-600 font-medium" height="300"> By JOEL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+ <!-- <label for="password" class="block text-900 text-xl font-medium mb-2">Contraseña</label>
+                    <input id="password" type="text" name="password" placeholder="Contraseña" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem" [(ngModel)]="usuario.password" required> -->
+
+                    <!-- <label for="c_password" class="block text-900 text-xl font-medium mb-2">Confirmar Contraseña</label>
+                    <input id="c_password" type="text" name="c_password" placeholder="Confirmar contraseña" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem" [(ngModel)]="usuario.c_password" required>
+                     -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <!-- <div class="surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden" style="background-image: url('assets/demo/images/patacamaya/fondo_pata.jpg'); background-size: cover;">
+    <div class="flex flex-column align-items-center justify-content-center">
+        <div style="border-radius:56px; padding:0.3rem; background: linear-gradient(180deg, var(--primary-color) 10%, rgba(33, 150, 243, 0) 30%);">
+            <div class="w-full surface-card py-8 px-5 sm:px-8" style="border-radius:53px">
+                <div class="text-center mb-5">
+                    <img src="assets/demo/images/patacamaya/logo.jpg" alt="Image" height="300" class="mb-3">
+                    <div class="text-900 text-3xl font-medium mb-3">REGISTRARSE <br> GAM-PATACAMAYA</div>
+                </div>
+
+                <form (ngSubmit)="registrarUsuario()" #formulario="ngForm">
+                    <label for="name" class="block text-900 text-xl font-medium mb-2">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Nombre" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem" [(ngModel)]="usuario.name" required>
+
+                    <label for="email" class="block text-900 text-xl font-medium mb-2">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Email" pInputText class="w-full md:w-30rem mb-5" style="padding:1rem" [(ngModel)]="usuario.email" required>
+
+                    <label for="password" class="block text-900 text-xl font-medium mb-2">Contraseña</label>
+                    <p-password id="password" name="password" placeholder="Contraseña" [toggleMask]="true" styleClass="mb-5" inputStyleClass="w-full p-3 md:w-30rem" [(ngModel)]="usuario.password" required></p-password>
+
+                    <label for="c_password" class="block text-900 text-xl font-medium mb-2">Confirmar Contraseña</label>
+                    <p-password id="c_password" name="c_password" [(ngModel)]="usuario.c_password" [toggleMask]="true" styleClass="mb-5" inputStyleClass="w-full p-3 md:w-30rem" required></p-password>
+
+                    <div *ngIf="formulario && formulario.controls['c_password'].errors && formulario.controls['c_password'].errors['mismatch']">
+                      Las contraseñas no coinciden.
+                    </div>
+
+
+                    <div class="flex align-items-center justify-content-between mb-5 gap-5">
+                    </div>
+                    <button pButton pRipple label="Registrarse" class="w-full p-3 text-xl" type="submit" [disabled]="formulario.form.invalid || (formulario.form.controls['c_password'].errors && formulario.form.controls['c_password'].errors['mismatch'])"></button>
+                    <br>
+                    <br>
+                    <span class="text-600 font-medium" height="300">By JOEL</span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> -->

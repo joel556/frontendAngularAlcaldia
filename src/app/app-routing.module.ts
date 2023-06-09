@@ -20,6 +20,9 @@ import { TrnaturalComponent } from './auth/components/registro/trnatural/trnatur
 import { TrjuridicaComponent } from './auth/components/registro/trjuridica/trjuridica.component';
 import { ValorComponent } from './auth/components/registro/valor/valor.component';
 import { TablasComponent } from './auth/components/registro/tablas/tablas.component';
+import { NosotrosComponent } from './auth/components/nosotros/nosotros.component';
+import { RegistroUsuarioComponent } from './auth/components/registro-usuario/registro-usuario.component';
+import { CalendarioComponent } from './admin/components/calendario/calendario.component';
 
 const routes: Routes = [
   {
@@ -87,16 +90,29 @@ const routes: Routes = [
         path: 'registro/tablas',
         component: TablasComponent,
       },
+      {
+        path: 'nosotros',
+        component: NosotrosComponent,
+      },
       // {
       //   path: 'admin/document-upload-form',
       //   component: DocumentUploadFormComponent,
       // },
+      {
+        path: 'calendario',
+        component: CalendarioComponent,
+      },
       
+      {
+        path: 'auth/registroUsuario',
+        component: RegistroUsuarioComponent
+      },
       
       {
         path: 'registro',
         component: RegistroComponent,
       },
+      
       {
         path: 'auth',
         loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)

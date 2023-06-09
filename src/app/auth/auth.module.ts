@@ -27,15 +27,30 @@ import { TrnaturalComponent } from './components/registro/trnatural/trnatural.co
 import { TrjuridicaComponent } from './components/registro/trjuridica/trjuridica.component';
 import { ValorComponent } from './components/registro/valor/valor.component';
 import { TablasComponent } from './components/registro/tablas/tablas.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
+import { RegistroUsuarioComponent } from './components/registro-usuario/registro-usuario.component';
 
 
 @NgModule({
   declarations: [// componentes,
     LoginComponent, 
     RegistroComponent, 
-    DocumentacionComponent, RadicatoriaComponent, DescuentoComponent, DuplicadoComponent, DupropiedadComponent, InscripcionComponent, InsfacturaComponent, DatostecnicosComponent, ModestructuraComponent, TrespecialComponent, TrnaturalComponent, TrjuridicaComponent, ValorComponent, TablasComponent, 
-
-    
+    DocumentacionComponent, 
+    RadicatoriaComponent, 
+    DescuentoComponent, 
+    DuplicadoComponent, 
+    DupropiedadComponent, 
+    InscripcionComponent, 
+    InsfacturaComponent, 
+    DatostecnicosComponent, 
+    ModestructuraComponent, 
+    TrespecialComponent, 
+    TrnaturalComponent, 
+    TrjuridicaComponent, 
+    ValorComponent, 
+    TablasComponent, 
+    NosotrosComponent, 
+    RegistroUsuarioComponent 
   ],
   imports: [ // modulos
     CommonModule,
@@ -47,7 +62,10 @@ import { TablasComponent } from './components/registro/tablas/tablas.component';
         CheckboxModule,
         InputTextModule,
         FormsModule,
-        PasswordModule
-  ]
+        PasswordModule,
+
+  ],
+
+  
 })
 export class AuthModule { }
